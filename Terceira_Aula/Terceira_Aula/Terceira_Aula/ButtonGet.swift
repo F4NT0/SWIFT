@@ -14,7 +14,7 @@ struct ButtonGet: View{
     
     var body : some View {
         Button(action: {self.showingAlert = true} ) {
-            Text("GET").bold().foregroundColor(.white).frame(width: 60, height: 30, alignment: .center).background(Color.blue).cornerRadius(10)
+            Text("GET").bold().foregroundColor(.blue).frame(width: 60, height: 30, alignment: .center).background(Color.gray.opacity(0.2)).cornerRadius(10)
         }.alert(isPresented: $showingAlert) {
             Alert(title: Text("Important message"), message: Text("You just bought a new App for your Iphone"), dismissButton: .default(Text("Got it!")))
         }
