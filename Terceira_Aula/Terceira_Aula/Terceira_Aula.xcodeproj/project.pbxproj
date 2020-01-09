@@ -15,6 +15,9 @@
 		023C6EEF23C795C200AB470F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023C6EED23C795C200AB470F /* LaunchScreen.storyboard */; };
 		023C6EFA23C795C300AB470F /* Terceira_AulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6EF923C795C300AB470F /* Terceira_AulaTests.swift */; };
 		023C6F0523C795C300AB470F /* Terceira_AulaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6F0423C795C300AB470F /* Terceira_AulaUITests.swift */; };
+		023C6F1323C79D4D00AB470F /* AppVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6F1223C79D4D00AB470F /* AppVisualizer.swift */; };
+		023C6F1523C79DFC00AB470F /* ButtonGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6F1423C79DFC00AB470F /* ButtonGet.swift */; };
+		023C6F1723C79EB500AB470F /* ButtonUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6F1623C79EB500AB470F /* ButtonUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		023C6F0023C795C300AB470F /* Terceira_AulaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Terceira_AulaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		023C6F0423C795C300AB470F /* Terceira_AulaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terceira_AulaUITests.swift; sourceTree = "<group>"; };
 		023C6F0623C795C300AB470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		023C6F1223C79D4D00AB470F /* AppVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVisualizer.swift; sourceTree = "<group>"; };
+		023C6F1423C79DFC00AB470F /* ButtonGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGet.swift; sourceTree = "<group>"; };
+		023C6F1623C79EB500AB470F /* ButtonUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				023C6EE223C795C100AB470F /* AppDelegate.swift */,
+				023C6F1223C79D4D00AB470F /* AppVisualizer.swift */,
+				023C6F1423C79DFC00AB470F /* ButtonGet.swift */,
+				023C6F1623C79EB500AB470F /* ButtonUp.swift */,
 				023C6EE423C795C100AB470F /* SceneDelegate.swift */,
 				023C6EE623C795C100AB470F /* ContentView.swift */,
 				023C6EE823C795C200AB470F /* Assets.xcassets */,
@@ -268,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				023C6EE323C795C100AB470F /* AppDelegate.swift in Sources */,
+				023C6F1323C79D4D00AB470F /* AppVisualizer.swift in Sources */,
+				023C6F1523C79DFC00AB470F /* ButtonGet.swift in Sources */,
 				023C6EE523C795C100AB470F /* SceneDelegate.swift in Sources */,
+				023C6F1723C79EB500AB470F /* ButtonUp.swift in Sources */,
 				023C6EE723C795C100AB470F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
