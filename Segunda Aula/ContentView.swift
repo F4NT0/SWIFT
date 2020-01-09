@@ -11,11 +11,14 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var showingAlert = false
-    @State private var sliderValue: Double = 0
-    var number:Int = Int.random(in: 0..<20)
+    @State private var sliderValue = 0.0
+    @State var numberNormal:Int = Int.random(in: 0..<20)
+    @State var numberHard:Int = Int.random(in: 0..<50)
     @State var end = false
     @State private var selectedIndex = 0
     private var options = ["Normal", "Hard"]
+    @State var levelNormal = 20
+    @State var levelHard = 50
     
     var body: some View {
         
@@ -34,7 +37,7 @@ struct ContentView: View {
                     HStack{
                         Text("Put the Slider as close as you can to ") // Chamando uma variavel dentro
                             .bold().font(.system(size: 20))
-                        Text("\(number)").bold().foregroundColor(.purple)
+                        Text("\(numberNormal)").bold().foregroundColor(.purple)
                         Spacer()
                     }.padding(20)
                     
@@ -46,33 +49,14 @@ struct ContentView: View {
                     }.padding(20)
                     
                     HStack{
-                        Button(action: {
-                            self.showingAlert = true
-                            if Int(self.sliderValue) == self.number{
-                                self.end = true
-                            }
-                        }){
-                            Text("Try it Guess!").bold().foregroundColor(.white)
-                                .frame(width: 150, height: 50, alignment: .center)
-                                .background(Color.purple).cornerRadius(30)
-                        }.alert(isPresented: $showingAlert){
-                            if(end == true){
-                                return  Alert(title: Text("Congratulations! \u{1F44D}"),
-                                              message: Text("You insert \(Int(sliderValue))"),
-                                              dismissButton: .default(Text("OK")))
-                            }
-                            return  Alert(title: Text("Fail! \u{26D4}"),
-                                          message: Text("You insert \(Int(sliderValue))"),
-                                          dismissButton: .default(Text("OK")))
-                            
-                        }
+                        Level(showingAlert: $showingAlert, number: $numberNormal, sliderValue: $sliderValue, end: $end)
                     }
                 }
                 if(selectedIndex == 1){
                     HStack{
                         Text("Put the Slider as close as you can to ") // Chamando uma variavel dentro
                             .bold().font(.system(size: 20))
-                        Text("\(number)").bold().foregroundColor(.purple)
+                        Text("\(numberHard)").bold().foregroundColor(.purple)
                         Spacer()
                     }.padding(20)
                     
@@ -84,26 +68,7 @@ struct ContentView: View {
                     }.padding(20)
                     
                     HStack{
-                        Button(action: {
-                            self.showingAlert = true
-                            if Int(self.sliderValue) == self.number{
-                                self.end = true
-                            }
-                        }){
-                            Text("Try it Guess!").bold().foregroundColor(.white)
-                                .frame(width: 150, height: 50, alignment: .center)
-                                .background(Color.purple).cornerRadius(30)
-                        }.alert(isPresented: $showingAlert){
-                            if(end == true){
-                                return  Alert(title: Text("Congratulations! \u{1F44D}"),
-                                              message: Text("You insert \(Int(sliderValue))"),
-                                              dismissButton: .default(Text("OK")))
-                            }
-                            return  Alert(title: Text("Fail! \u{26D4}"),
-                                          message: Text("You insert \(Int(sliderValue))"),
-                                          dismissButton: .default(Text("OK")))
-                            
-                        }
+                        Level(showingAlert: $showingAlert, number: $numberHard, sliderValue: $sliderValue, end: $end)
                     }
                 }
             }
