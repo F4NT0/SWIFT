@@ -43,23 +43,7 @@ struct ContentView: View {
                 }
             }
         }
-        
-//        VStack{
-//            Section(header: Text("Apps")){
-//            Text("Popular Apps").bold().font(.system(size: 20)).frame(width: UIScreen.main.bounds.width/2.0, height: nil, alignment: .leading)
-//            List(popular){ popular in
-//                AppVisualizer(model: popular)
-//            };
-//        }
-        
-//            Section(header: Text("Apps we love")){
-//                Text("Apps we love").bold().font(.system(size: 20)).frame(width: UIScreen.main.bounds.width/2.0, height: nil, alignment: .leading)
-//                List(weLove){ weLove in
-//                    AppVisualizer(model: weLove)
-//                }
-//            }
-            
-        }
+    }
 }
 
 //struct ContentView_Previews: PreviewProvider {
