@@ -17,6 +17,6 @@ struct CartView: View{
             ForEach(0 ..< order.products.count) { index in
                 Text(self.order.products[index])
             }
-        }.navigationBarTitle("Cart")
+        }.navigationBarTitle("Downloaded Apps")
     }
 }

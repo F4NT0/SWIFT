@@ -16,7 +16,7 @@ struct AppVisualizer: View {
     var model: App
     
     var body: some View{
-        NavigationLink(destination: AppInfo()){
+        NavigationLink(destination: AppInfo(model: model)){
             HStack{
                 Image(model.tittleimages)
                     .resizable()

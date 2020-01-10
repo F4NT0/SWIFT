@@ -15,10 +15,13 @@ struct ButtonGet: View{
     var body : some View {
         Button(action: {
             if self.isAppDownloaded{
+                print("app aberto")
+            }else{
+                self.isAppDownloaded = true
                 
             }
-        } ) {
+        }) {
             Text(isAppDownloaded ? "OPEN" : "GET").bold().foregroundColor(.blue).frame(width: 60, height: 30, alignment: .center).background(Color.gray.opacity(0.2)).cornerRadius(10)
-        }.buttonStyle()
+        }.buttonStyle(PlainButtonStyle())
     }
 }
