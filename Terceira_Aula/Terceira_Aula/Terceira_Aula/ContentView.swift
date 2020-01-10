@@ -30,37 +30,36 @@ struct ContentView: View {
     
     var body: some View {
         
-        // EM FORMA DE FOREACH
-        
-        //        ScrollView{
-        //            ForEach(items){i in
-        //                Image("icon")
-        //                    .resizable()
-        //                    .frame(width: 150, height: 150, alignment: .center)
-        //                    .cornerRadius(30)
-        //            }
-        //        }
-        
-        // EM FORMA DE LIST
-        
-        
-        VStack{
-            Section(header: Text("Apps")){
-            Text("Popular Apps").bold().font(.system(size: 20)).frame(width: UIScreen.main.bounds.width/2.0, height: nil, alignment: .leading)
-            List(popular){ popular in
-                AppVisualizer(model: popular)
+        List{
+            
+            Section(header: Text("Popular Apps").bold().font(.system(size: 20)).background(Color.white)){
+                ForEach(popular){ popular in
+                    AppVisualizer(model: popular)
+                }
             };
-        }
-        
-            Section(header: Text("Apps we love")){
-                Text("Apps we love").bold().font(.system(size: 20)).frame(width: UIScreen.main.bounds.width/2.0, height: nil, alignment: .leading)
-                List(weLove){ weLove in
+            Section(header: Text("Apps we love").bold().font(.system(size: 20)).background(Color.white)){
+                ForEach(weLove){ weLove in
                     AppVisualizer(model: weLove)
                 }
             }
+        }
+        
+//        VStack{
+//            Section(header: Text("Apps")){
+//            Text("Popular Apps").bold().font(.system(size: 20)).frame(width: UIScreen.main.bounds.width/2.0, height: nil, alignment: .leading)
+//            List(popular){ popular in
+//                AppVisualizer(model: popular)
+//            };
+//        }
+        
+//            Section(header: Text("Apps we love")){
+//                Text("Apps we love").bold().font(.system(size: 20)).frame(width: UIScreen.main.bounds.width/2.0, height: nil, alignment: .leading)
+//                List(weLove){ weLove in
+//                    AppVisualizer(model: weLove)
+//                }
+//            }
             
         }
-    }
 }
 
 //struct ContentView_Previews: PreviewProvider {
