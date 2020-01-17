@@ -35,10 +35,6 @@ struct AppInfo: View {
                             Text("GET").bold().foregroundColor(.white).frame(width: 60, height: 30, alignment: .center).background(Color.blue).cornerRadius(10)
                         }
                         Text("In App Purchases").foregroundColor(.gray).font(.system(size: 10)).frame(width: 55, height: nil, alignment: .leading)
-                        Spacer()
-                        Button(action: { self.showingShare = true }){
-                            Image(systemName: "square.and.arrow.up").foregroundColor(.blue).font(.system(size: 22))
-                        }
                     }
                 }
             }.padding(20)
